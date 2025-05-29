@@ -69,6 +69,43 @@
       margin-bottom: 0.5rem;
     }
 
+
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .lang-btn {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--accent-color);
+      border-radius: 8px;
+      background-color: transparent;
+      color: var(--accent-color);
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .lang-btn.active {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .lang-btn {
+        border-color: #0a84ff;
+        color: #0a84ff;
+      }
+
+      .lang-btn.active {
+        background-color: #0a84ff;
+        color: #fff;
+      }
+    }
+
     @media (prefers-color-scheme: dark) {
       :root {
         --text-color: #ddd;
@@ -86,47 +123,120 @@
 </head>
 <body>
   <main>
-    <h1>Terms & Conditions for Notica</h1>
-    <p><strong>Last Updated:</strong> 29 May 2025</p>
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
 
-    <h2>Acceptance of Terms</h2>
-    <p>By using Notica ("App"), you agree to these Terms & Conditions.</p>
+    <div id="en">
+      <h1>Terms & Conditions for Notica</h1>
+      <p><strong>Last Updated:</strong> 29 May 2025</p>
 
-    <h2>Intellectual Property</h2>
-    <ul>
-      <li>The App and its content (excluding user data) are owned by Alina Potapova.</li>
-      <li>Users retain ownership of their entries but grant the App a license to process data locally for functionality (e.g., ML model mood analysis).</li>
-    </ul>
+      <h2>Acceptance of Terms</h2>
+      <p>By using Notica ("App"), you agree to these Terms & Conditions.</p>
 
-    <h2>User Responsibilities</h2>
-    <ul>
-      <li>You must not use the App for illegal or harmful content.</li>
-      <li>The App is intended for personal use; commercial use is prohibited.</li>
-    </ul>
+      <h2>Intellectual Property</h2>
+      <ul>
+        <li>The App and its content (excluding user data) are owned by Alina Potapova.</li>
+        <li>Users retain ownership of their entries but grant the App a license to process data locally for functionality (e.g., ML model mood analysis).</li>
+      </ul>
 
-    <h2>Disclaimer</h2>
-    <ul>
-      <li>The App’s ML model mood labels are for informational purposes only and not medical advice.</li>
-      <li>We do not guarantee uninterrupted service or data loss prevention.</li>
-    </ul>
+      <h2>User Responsibilities</h2>
+      <ul>
+        <li>You must not use the App for illegal or harmful content.</li>
+        <li>The App is intended for personal use; commercial use is prohibited.</li>
+      </ul>
 
-    <h2>Limitation of Liability</h2>
-    <p>Alina Potapova is not liable for:</p>
-    <ul>
-      <li>Data loss due to device failure or user error</li>
-      <li>Indirect damages from App use</li>
-    </ul>
+      <h2>Disclaimer</h2>
+      <ul>
+        <li>The App’s ML model mood labels are for informational purposes only and not medical advice.</li>
+        <li>We do not guarantee uninterrupted service or data loss prevention.</li>
+      </ul>
 
-    <h2>Termination</h2>
-    <p>We may suspend access if you violate these Terms.</p>
+      <h2>Limitation of Liability</h2>
+      <p>Alina Potapova is not liable for:</p>
+      <ul>
+        <li>Data loss due to device failure or user error.</li>
+        <li>Indirect damages from App use.</li>
+      </ul>
 
-    <h2>Governing Law</h2>
-    <p>These Terms are governed by the laws of Russian Federation.</p>
+      <h2>Termination</h2>
+      <p>We may suspend access if you violate these Terms.</p>
 
-    <h2>Contact</h2>
-    <p>For support or inquiries:</p>
-    <p>Email: <a href="mailto:notica.help@gmail.com">notica.help@gmail.com</a><br/>
-       Telegram: <a href="https://t.me/noticahelpsupport">https://t.me/noticahelpsupport</a></p>
+      <h2>Governing Law</h2>
+      <p>These Terms are governed by the laws of Russian Federation.</p>
+
+      <h2>Contact</h2>
+      <p>For support or inquiries:</p>
+      <p>Email: <a href="mailto:notica.help@gmail.com">notica.help@gmail.com</a><br/>
+         Telegram: <a href="https://t.me/noticahelpsupport">https://t.me/noticahelpsupport</a></p>
+    </div>
+
+    <div id="ru">
+      <h1>Условия использования Notica</h1>
+      <p><strong>Последнее обновление:</strong> 29 мая 2025</p>
+
+      <h2>Принятие условий</h2>
+      <p>Используя Notica ("Приложение"), вы соглашаетесь с настоящими условиями использования.</p>
+
+      <h2>Интеллектуальная собственность</h2>
+      <ul>
+        <li>Приложение и его содержимое (за исключением пользовательских данных) принадлежат Алине Потаповой.</li>
+        <li>Пользователи сохраняют право собственности на свои записи, но предоставляют Приложению лицензию на локальную обработку данных для обеспечения функциональности (например, анализ настроения с помощью ML-модели).</li>
+      </ul>
+
+      <h2>Обязанности пользователя</h2>
+      <ul>
+        <li>Вы не должны использовать Приложение для незаконного или вредоносного контента.</li>
+        <li>Приложение предназначено для личного использования; коммерческое использование запрещено.</li>
+      </ul>
+
+      <h2>Отказ от ответственности</h2>
+      <ul>
+        <li>Метки настроения от ML-модели в Приложении предоставляются только в информационных целях и не являются медицинской рекомендацией.</li>
+        <li>Мы не гарантируем бесперебойную работу или защиту от потери данных.</li>
+      </ul>
+
+      <h2>Ограничение ответственности</h2>
+      <p>Алина Потапова не несёт ответственность за:</p>
+      <ul>
+        <li>Потерю данных из-за сбоя устройства или ошибок пользователя.</li>
+        <li>Косвенный ущерб, связанный с использованием Приложения.</li>
+      </ul>
+
+      <h2>Прекращение действия</h2>
+      <p>Мы можем приостановить доступ, если вы нарушаете эти условия.</p>
+
+      <h2>Применимое право</h2>
+      <p>Эти условия регулируются законодательством Российской Федерации.</p>
+
+      <h2>Контакты</h2>
+      <p>По вопросам поддержки или запросам:</p>
+      <p>Email: <a href="mailto:notica.help@gmail.com">notica.help@gmail.com</a><br/>
+         Telegram: <a href="https://t.me/noticahelpsupport">https://t.me/noticahelpsupport</a></p>
+    </div>
   </main>
+
+  <script>
+    function switchLang(lang) {
+      document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById('ru').style.display = lang === 'ru' ? 'block' : 'none';
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    // по умолчанию активировать английский при загрузке
+    document.addEventListener("DOMContentLoaded", () => {
+      switchLang('en');
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          switchLang(btn.dataset.lang);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
